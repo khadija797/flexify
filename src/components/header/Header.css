@@ -1,0 +1,80 @@
+.header {
+  height: 34vw;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/public/menu_1.png') no-repeat center center;
+  background-size: cover;
+  filter: blur(4px);
+  z-index: 0;
+}
+
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 3s;
+}
+
+.header-contents h2 {
+  font-weight: 500;
+  color: #5c18b6;
+  font-size: max(4.5vw, 22px);
+  text-transform: uppercase;
+}
+
+.header-contents p {
+  color: #5c18b6;
+  font-size: 1vw;
+}
+
+.header-contents button {
+  background: #692eb6;
+  font-size: max(1vw, 13px);
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.header-contents button:hover {
+  font-size: 20px;
+}
+
+@media (max-width: 1050px) {
+  .header-contents {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 750px) {
+  .header-contents {
+    max-width: 65%;
+  }
+  .header-contents p {
+    display: none;
+  }
+  .header-contents button {
+    padding: 2vw 4vw;
+  }
+}
